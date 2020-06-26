@@ -4,3 +4,12 @@ spring:
       database: sample
       host: host.docker.internal
       port: 27017
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate=DEBUG:
