@@ -20,7 +20,7 @@ public class Book extends BaseEntity {
 
 	private PersonInfo person;
 
-	private int publisherId;
+	private String publisherId;
 
 	/**
 	 * Publishing year
@@ -39,5 +39,12 @@ public class Book extends BaseEntity {
 			reviews = new ArrayList<>();
 		}
 		reviews.add(review);
+	}
+
+	public void addTranslation(String name, String locale) {
+		if (names == null) {
+			names = new ArrayList<>();
+		}
+		names.add(new Translation(name, locale));
 	}
 }
