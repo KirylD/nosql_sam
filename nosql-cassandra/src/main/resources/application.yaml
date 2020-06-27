@@ -1,0 +1,12 @@
+spring:
+  data:
+    cassandra:
+      contact-points:
+        - host.docker.internal:9042
+      local-datacenter: dc1
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 5s
+      keyspace-name: shop
+      request:
+        serial-consistency: any
